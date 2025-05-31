@@ -18,7 +18,7 @@ export default function Home() {
             width={800}
             height={800}
             priority
-            className="h-[50vh] md:h-[80vh] w-auto max-w-none object-contain object-right-bottom translate-x-[15%] translate-y-[10%] absolute bottom-0 right-0"
+            className="h-[35vh] md:h-[80vh] w-auto max-w-none object-contain object-right-bottom translate-x-[15%] translate-y-[15%] md:translate-y-[10%] absolute bottom-0 right-0"
           />
         </div>
 
