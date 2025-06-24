@@ -51,6 +51,17 @@ export default function Home() {
                     className="w-auto h-24"
                   />
                 </div>
+                {/* Dollar sign image below the B2B logo - mobile */}
+                <div className="mt-4">
+                  <Image 
+                    src="/images/dollars.png" 
+                    alt="Dollars" 
+                    width={450} 
+                    height={450} 
+                    className="w-auto h-44"
+                    priority
+                  />
+                </div>
               </div>
               
               {/* Desktop view - KAZI IS BUILDING on one line */}
@@ -69,6 +80,17 @@ export default function Home() {
                     className="w-full h-auto object-left object-contain max-h-24"
                   />
                 </div>
+                {/* Dollar sign image below the B2B logo - desktop */}
+                <div className="mt-6">
+                  <Image 
+                    src="/images/dollars.png" 
+                    alt="Dollars" 
+                    width={600} 
+                    height={600} 
+                    className="w-auto h-60 object-left object-contain"
+                    priority
+                  />
+                </div>
               </div>
             </div>
 
@@ -83,9 +105,108 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Bottom white section with fixed height */}
+          {/* Bottom white section with fixed height - now with social icons */}
           <div className="bg-[#F2F2F2] text-black h-10 w-full px-8 flex items-center relative z-10">
-            <div className="ml-0 z-50 relative bg-[#F2F2F2] bg-opacity-80 p-1 md:p-0 md:bg-transparent">FOUNDER DNA.</div>
+            <div className="ml-0 z-50 relative bg-[#F2F2F2] bg-opacity-80 p-1 md:p-0 md:bg-transparent flex items-center space-x-4">
+              {/* LinkedIn */}
+              <a 
+                href="https://www.linkedin.com/in/kazihossain1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transform transition-transform hover:scale-110"
+              >
+                <Image 
+                  src="/images/linkedin_icon.png" 
+                  alt="LinkedIn" 
+                  width={20} 
+                  height={20} 
+                  className="object-contain"
+                />
+              </a>
+              
+              {/* Farcaster */}
+              <a 
+                href="https://farcaster.xyz/kazi" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transform transition-transform hover:scale-110"
+              >
+                <Image 
+                  src="/images/farcaster_icon.png" 
+                  alt="Farcaster" 
+                  width={20} 
+                  height={20} 
+                  className="object-contain"
+                />
+              </a>
+              
+              {/* Twitter */}
+              <a 
+                href="https://twitter.com/wolfofbaystreet" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transform transition-transform hover:scale-110"
+              >
+                <Image 
+                  src="/images/twitter_icon.png" 
+                  alt="Twitter" 
+                  width={20} 
+                  height={20} 
+                  className="object-contain"
+                />
+              </a>
+              
+              {/* Instagram */}
+              <a 
+                href="https://instagram.com/realestkazi/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transform transition-transform hover:scale-110"
+              >
+                <Image 
+                  src="/images/ig_icon.png" 
+                  alt="Instagram" 
+                  width={20} 
+                  height={20} 
+                  className="object-contain"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* My Story Section - Moved right after hero section */}
+      <section id="my-story" className="bg-black text-white py-16 px-4 md:px-12">
+        <div className="container mx-0 max-w-none">
+          {/* Section heading - explicitly left aligned */}
+          <div className="text-left">
+            <h2 className="text-2xl font-bold mb-8 text-left pl-0 md:pl-0">MY STORY</h2>
+          </div>
+          
+          <div className="space-y-8 text-left">
+            <div className="max-w-3xl ml-0">
+              <p className="text-sm md:text-base leading-relaxed text-left">
+                I&apos;ve been working in startups for the past 5 years. I built a personal brand on (12.5k) LinkedIn and (33k) Warpcaster to build. I left my job as a data engineer at the department of defense to build. Won $100k grants to build, raised some angel capital to build and even left the comforts of home to live in San Francisco to build. I manage a community of 220,000 founders.
+              </p>
+            </div>
+
+            <div className="max-w-3xl ml-0">
+              <p className="text-sm md:text-base leading-relaxed text-left">
+                I&apos;m a builder that loves the thrill of the build. Nothing stimulates me more than figuring out the puzzle that is PMF. B2B SaaS is my passion.<br />
+                I interview other builders like you<br />
+                Founder of Firebase, Stytch, Warpcaster, etc on my podcast. If you want to chat and you&apos;re building something interesting I&apos;m not hard to find.
+              </p>
+            </div>
+
+            <div className="flex justify-start ml-0">
+              <a 
+                href="mailto:kazi@thred.ai" 
+                className="inline-block bg-[#F2F2F2] text-black px-4 py-2 text-xs font-bold hover:bg-opacity-90 transition-all duration-200 tracking-wide"
+              >
+                GRAB COFFEE
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -284,38 +405,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* My Story Section */}
-      <section id="my-story" className="bg-black text-white py-16 px-4 md:px-8">
-        <div className="max-w-5xl mx-auto">
-          {/* Section heading */}
-          <h2 className="text-2xl font-bold mb-8">MY STORY</h2>
-          
-          <div className="space-y-8">
-            <div>
-              <p className="text-sm md:text-base leading-relaxed text-left max-w-3xl">
-                I&apos;ve been working in startups for the past 5 years. I built a personal brand on (12.5k) LinkedIn and (33k) Warpcaster to build. I left my job as a data engineer at the department of defense to build. Won $100k grants to build, raised some angel capital to build and even left the comforts of home to live in San Francisco to build. I manage a community of 220,000 founders.
-              </p>
-            </div>
-
-            <div>
-              <p className="text-sm md:text-base leading-relaxed text-left max-w-3xl">
-                I&apos;m a builder that loves the thrill of the build. Nothing stimulates me more than figuring out the puzzle that is PMF. B2B SaaS is my passion.<br />
-                I interview other builders like you<br />
-                Founder of Firebase, Stytch, Warpcaster, etc on my podcast. If you want to chat and you&apos;re building something interesting I&apos;m not hard to find.
-              </p>
-            </div>
-
-            <div className="flex justify-start">
-              <a 
-                href="mailto:kazi@thred.ai" 
-                className="inline-block bg-[#F2F2F2] text-black px-4 py-2 text-xs font-bold hover:bg-opacity-90 transition-all duration-200 tracking-wide"
-              >
-                GRAB COFFEE
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* My Story Section - Moved to top */}
+      {/* This section has been moved up, right after the hero section */}
 
       {/* Social Media Icons Section */}
       <section className="bg-black text-white py-12 px-4 md:px-8">
@@ -339,7 +430,7 @@ export default function Home() {
             
             {/* Farcaster */}
             <a 
-              href="https://farcaster.com/kazi" 
+              href="https://farcaster.xyz/kazi" 
               target="_blank" 
               rel="noopener noreferrer"
               className="transform transition-transform hover:scale-110"
